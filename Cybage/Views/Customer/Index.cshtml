@@ -1,0 +1,132 @@
+﻿@model List<Customer>
+
+<style>
+    /* CSS styles */
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .error {
+        color: red;
+    }
+
+    .hidden-form {
+        display: none;
+    }
+</style>
+
+<script>
+
+
+    // JavaScript validation function
+    function validateForm() {
+        var firstName = document.forms["customerForm"]["firstName"].value;
+        var lastName = document.forms["customerForm"]["lastName"].value;
+        var email = document.forms["customerForm"]["email"].value;
+        var phoneNumber = document.forms["customerForm"]["phoneNumber"].value;
+
+        if (firstName == "") {
+            document.getElementById("firstNameError").innerHTML = "First Name is required.";
+            return false;
+        }
+
+        if (lastName == "") {
+            document.getElementById("lastNameError").innerHTML = "Last Name is required.";
+            return false;
+        }
+
+        if (email == "") {
+            document.getElementById("emailError").innerHTML = "Email is required.";
+            return false;
+        }
+
+        if (phoneNumber == "") {
+            document.getElementById("phoneNumberError").innerHTML = "Phone Number is required.";
+            return false;
+        }
+    }
+</script>
+
+<table>
+    <thead>
+        <tr>
+            <th>Customer ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Country Code</th>
+            <th>Gender</th>
+            <th>Balance</th>
+            <th></th> <!-- Delete column -->
+            <th></th> <!-- Edit column -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var customer in Model)
+        {
+            <tr>
+                <td>@customer.Id</td>
+                <td>@customer.FirstName</td>
+                <td>@customer.LastName</td>
+                <td>@customer.Email</td>
+                <td>@customer.phone_Number</td>
+                <td>@customer.country_code</td>
+                <td>@customer.Gender</td>
+                <td>@customer.Balance.ToString("C")</td>
+                <td><a href="@Url.Action("Delete", new { Id = customer.Id })">Delete</a></td>
+                <td><a href="@Url.Action("Edit", new { Id = customer.Id })">Edit</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<button onclick="location.href='@Url.Action("Create")'">Add New Customer</button>
+
+<div class="hidden-form">
+<form name="customerForm"  onsubmit="return validateForm()">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required>
+    <span id="firstNameError" class="error"></span><br>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required>
+    <span id="lastNameError" class="error"></span><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <span id="emailError" class="error"></span><br>
+
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="text" id="phoneNumber" name="phoneNumber" required>
+    <span id="phoneNumberError" class="error"></span><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+</div>
+
+
+
+
+<script>
+    function deleteCustomer(id) {
+        
+    }
+</script>
+

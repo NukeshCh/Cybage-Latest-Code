@@ -1,0 +1,49 @@
+﻿@model Customer
+
+@using (Html.BeginForm("Edit", "Customer", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        <label for="CustomerId">Customer Id:</label>
+        <input type="text" id="Id" name="Id" value="@Model.Id" required class="form-control" />
+        <span class="text-danger">@Html.ValidationMessageFor(m => m.Id)</span>
+    </div>
+    <div class="form-group">
+        <label for="FirstName">First Name:</label>
+        <input type="text" id="FirstName" name="FirstName" value="@Model.FirstName" required class="form-control" />
+        <span class="text-danger">@Html.ValidationMessageFor(m => m.FirstName)</span>
+    </div>
+    <div class="form-group">
+        <label for="LastName">Last Name:</label>
+        <input type="text" id="LastName" name="LastName" value="@Model.LastName" required class="form-control" />
+        <span class="text-danger">@Html.ValidationMessageFor(m => m.LastName)</span>
+    </div>
+    <div class="form-group">
+        <label for="Email">Email:</label>
+        <input type="email" id="Email" name="Email" value="@Model.Email" required class="form-control" />
+        <span class="text-danger">@Html.ValidationMessageFor(m => m.Email)</span>
+    </div>
+    <div class="form-group">
+        <label for="phone_Number">Phone Number:</label>
+        <input type="text" id="phone_Number" name="phone_Number" value="@Model.phone_Number" required class="form-control" />
+        <span class="text-danger">@Html.ValidationMessageFor(m => m.phone_Number)</span>
+    </div>
+    <div class="form-group">
+        <label for="country_code">Country Code:</label>
+        <input type="text" id="country_code" name="country_code" value="@Model.country_code" required class="form-control" />
+        <span class="text-danger">@Html.ValidationMessageFor(m => m.country_code)</span>
+    </div>
+    <div class="form-group">
+        <label for="Gender">Gender:</label>
+        <input type="text" id="Gender" name="Gender" value="@Model.Gender" required class="form-control" />
+        <span class="text-danger">@Html.ValidationMessageFor(m => m.Gender)</span>
+    </div>
+    <div class="form-group">
+        <label for="Balance">Balance:</label>
+        <input type="number" id="Balance" name="Balance" value="@Model.Balance" required class="form-control" />
+        <span class="text-danger">@Html.ValidationMessageFor(m => m.Balance)</span>
+    </div>
+
+    <input type="submit" value="Edit" class="btn btn-primary" />
+}

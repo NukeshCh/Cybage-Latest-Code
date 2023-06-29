@@ -1,0 +1,12 @@
+﻿@model Customer
+
+<h2>Delete Customer</h2>
+
+<p>Are you sure you want to delete the customer with ID: @Model.Id?</p>
+
+
+@using (Html.BeginForm("Delete", "Customer", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <input type="submit" value="Delete" />
+}

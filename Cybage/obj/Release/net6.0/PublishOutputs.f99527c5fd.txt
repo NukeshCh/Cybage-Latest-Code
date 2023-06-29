@@ -1,0 +1,14 @@
+D:\Project\External Tasks\Cybage\Cybage\obj\Release\net6.0\PubTmp\Out\Cybage.exe
+D:\Project\External Tasks\Cybage\Cybage\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+D:\Project\External Tasks\Cybage\Cybage\obj\Release\net6.0\PubTmp\Out\appsettings.json
+D:\Project\External Tasks\Cybage\Cybage\obj\Release\net6.0\PubTmp\Out\Cybage.dll
+D:\Project\External Tasks\Cybage\Cybage\obj\Release\net6.0\PubTmp\Out\Cybage.deps.json
+D:\Project\External Tasks\Cybage\Cybage\obj\Release\net6.0\PubTmp\Out\Cybage.runtimeconfig.json
+D:\Project\External Tasks\Cybage\Cybage\obj\Release\net6.0\PubTmp\Out\Cybage.pdb
+D:\Project\External Tasks\Cybage\Cybage\obj\Release\net6.0\PubTmp\Out\FromHeaderAttribute.dll
+D:\Project\External Tasks\Cybage\Cybage\obj\Release\net6.0\PubTmp\Out\System.Net.Http.Formatting.dll
+D:\Project\External Tasks\Cybage\Cybage\obj\Release\net6.0\PubTmp\Out\System.Web.Http.dll
+D:\Project\External Tasks\Cybage\Cybage\obj\Release\net6.0\PubTmp\Out\System.Web.Http.WebHost.dll
+D:\Project\External Tasks\Cybage\Cybage\obj\Release\net6.0\PubTmp\Out\Newtonsoft.Json.dll
+D:\Project\External Tasks\Cybage\Cybage\obj\Release\net6.0\PubTmp\Out\Newtonsoft.Json.Bson.dll
+D:\Project\External Tasks\Cybage\Cybage\obj\Release\net6.0\PubTmp\Out\Swagger.Net.dll
